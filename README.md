@@ -5,6 +5,7 @@
 ⸻
 
 🏆 Achievements
+
 	-	Received 1st place in the Business Informatics major 🥇
 	-	Was selected among the best projects to be presented at the First Student Poster Conference at German International University – GIU
 
@@ -15,6 +16,7 @@
 This project presents the design and implementation of a Human Resource Management System (HRMS) database. The system integrates employee data, performance appraisal, and training management into a unified platform.
 
 It improves:
+
 	•	Data consistency
 	•	Transparency in performance evaluation
 	•	Workforce development tracking
@@ -22,6 +24,7 @@ It improves:
 ⸻
 
 🎯 Objectives
+
 	•	Design a relational database schema for HR operations
 	•	Manage employee profiles and job assignments
 	•	Track performance using objectives and KPIs
@@ -33,6 +36,7 @@ It improves:
 🧱 System Modules
 
 🏫 University Structure
+
 	•	University
 	•	Faculty
 	•	Department
@@ -42,6 +46,7 @@ These entities define the organizational hierarchy.
 ⸻
 
 👤 Employee Management
+
 	•	Employee personal & professional data
 	•	Contact details & emergency contacts
 	•	Employment status and job information
@@ -51,12 +56,14 @@ These entities define the organizational hierarchy.
 ⸻
 
 🎓 Qualifications & Certifications
+
 	•	Educational Qualifications
 	•	Professional Certificates
 
 ⸻
 
 📄 Job & Contracts
+
 	•	Job roles, levels, and salary ranges
 	•	Contract types (permanent, probation, temporary)
 	•	Job assignments linking employees to roles
@@ -64,8 +71,9 @@ These entities define the organizational hierarchy.
 ⸻
 
 📊 Performance Management
-	•	Job Objectives (weights = 100%)
-	•	KPIs per objective (weights = 100%)
+
+	•	Job Objectives 
+	•	KPIs per objective 
 	•	Performance cycles (annual, quarterly, etc.)
 	•	Employee KPI scores
 	•	Final appraisal system
@@ -73,12 +81,14 @@ These entities define the organizational hierarchy.
 ⸻
 
 ⚖️ Appeals System
+
 	•	Employees can submit appeals for evaluations
 	•	Tracks approval/rejection and revised scores
 
 ⸻
 
 📚 Training & Development
+
 	•	Training programs (internal/external, online, etc.)
 	•	Employee training participation
 	•	Training certificates upon completion
@@ -86,6 +96,7 @@ These entities define the organizational hierarchy.
 ⸻
 
 🧠 Database Design Highlights
+
 	•	Fully normalized relational schema
 	•	Strong use of primary and foreign keys
 	•	Supports many-to-many relationships (e.g., Employee ↔ Training)
@@ -94,6 +105,7 @@ These entities define the organizational hierarchy.
 ⸻
 
 🛠️ Technologies Used
+
 	•	SQL (Database design & queries)
 	•	Power BI (Data visualization & dashboards)
 	•	ERD drawing
@@ -103,6 +115,7 @@ These entities define the organizational hierarchy.
 📊 Dashboard
 
 The Power BI dashboard provides insights into:
+
 	•	Employee distribution
 	•	Performance scores
 	•	Training participation
@@ -113,6 +126,7 @@ The Power BI dashboard provides insights into:
 ⸻
 
 🔍 Key Insights
+
 	•	Performance evaluation is standardized using weighted KPIs
 	•	Training programs are linked to employee development
 	•	Job assignments allow tracking of career progression
@@ -123,6 +137,7 @@ The Power BI dashboard provides insights into:
 💡 Business Value
 
 This system enables organizations to:
+
 	•	Make data-driven HR decisions
 	•	Track employee growth and performance
 	•	Improve workforce planning
@@ -131,6 +146,7 @@ This system enables organizations to:
 ⸻
 
 🚀 Future Improvements
+
 	•	Integration with real-time HR systems
 	•	Advanced analytics (predictive performance modeling)
 	•	Role-based access control
