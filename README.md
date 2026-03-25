@@ -7,6 +7,7 @@
 This project presents the design and implementation of a Human Resource Management System (HRMS) database. The system integrates employee data, performance appraisal, and training management into a unified platform.
 
 It aims to improve:
+
 	•	Data consistency
 	•	Transparency in performance evaluation
 	•	Workforce development tracking
@@ -14,6 +15,7 @@ It aims to improve:
 ⸻
 
 🎯 Objectives
+
 	•	Design a relational database schema for HR operations
 	•	Manage employee profiles and job assignments
 	•	Track performance using objectives and KPIs
@@ -25,6 +27,7 @@ It aims to improve:
 🧱 System Modules
 
 🏫 University Structure
+
 	•	University
 	•	Faculty
 	•	Department
@@ -34,6 +37,7 @@ These entities define the organizational hierarchy.
 ⸻
 
 👤 Employee Management
+
 	•	Employee personal & professional data
 	•	Contact details & emergency contacts
 	•	Employment status and job information
@@ -43,12 +47,14 @@ These entities define the organizational hierarchy.
 ⸻
 
 🎓 Qualifications & Certifications
+
 	•	Educational Qualifications
 	•	Professional Certificates
 
 ⸻
 
 📄 Job & Contracts
+
 	•	Job roles, levels, and salary ranges
 	•	Contract types (permanent, probation, temporary)
 	•	Job assignments linking employees to roles
@@ -56,6 +62,7 @@ These entities define the organizational hierarchy.
 ⸻
 
 📊 Performance Management
+
 	•	Job Objectives (must total 100%)
 	•	KPIs per objective (must total 100%)
 	•	Performance cycles (annual, quarterly, etc.)
