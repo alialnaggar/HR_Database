@@ -72,12 +72,14 @@ These entities define the organizational hierarchy.
 ⸻
 
 ⚖️ Appeals System
+
 	•	Employees can submit appeals for evaluations
 	•	Tracks approval/rejection and revised scores
 
 ⸻
 
 📚 Training & Development
+
 	•	Training programs (internal/external, online, etc.)
 	•	Employee training participation
 	•	Training certificates upon completion
@@ -85,6 +87,7 @@ These entities define the organizational hierarchy.
 ⸻
 
 🧠 Database Design Highlights
+
 	•	Fully normalized relational schema
 	•	Strong use of primary and foreign keys
 	•	Support for many-to-many relationships (e.g., Employee ↔ Training)
@@ -96,15 +99,17 @@ These entities define the organizational hierarchy.
 ⸻
 
 🛠️ Technologies Used
+
 	•	SQL (Database design & queries)
 	•	Power BI (Data visualization & dashboarding)
-  •	ERD drawing
+    •	ERD drawing
   
 ⸻
 
 📊 Dashboard
 
 The Power BI dashboard provides insights into:
+
 	•	Employee distribution
 	•	Performance scores
 	•	Training participation
@@ -115,6 +120,7 @@ The Power BI dashboard provides insights into:
 ⸻
 
 🔍 Key Insights (Example)
+
 	•	Performance evaluation is standardized using weighted KPIs
 	•	Training programs are linked to employee development
 	•	Job assignments allow tracking of career progression
@@ -125,6 +131,7 @@ The Power BI dashboard provides insights into:
 💡 Business Value
 
 This system enables organizations to:
+
 	•	Make data-driven HR decisions
 	•	Track employee growth and performance
 	•	Improve workforce planning
@@ -133,6 +140,7 @@ This system enables organizations to:
 ⸻
 
 🚀 Future Improvements
+
 	•	Integration with real-time HR systems
 	•	Advanced analytics (predictive performance modeling)
 	•	Role-based access control
