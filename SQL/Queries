@@ -1,1 +1,1742 @@
 
+-- Temporary view structure for view `v_active_job_assignments`
+--
+
+DROP TABLE IF EXISTS `v_active_job_assignments`;
+/*!50001 DROP VIEW IF EXISTS `v_active_job_assignments`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_active_job_assignments` AS SELECT 
+ 1 AS `Assignment_ID`,
+ 1 AS `Employee_ID`,
+ 1 AS `Employee_Name`,
+ 1 AS `Employment_Status`,
+ 1 AS `Gender`,
+ 1 AS `Department_Name`,
+ 1 AS `Job_Title`,
+ 1 AS `Job_Level`,
+ 1 AS `Job_Category`,
+ 1 AS `Start_Date`,
+ 1 AS `End_Date`,
+ 1 AS `Status`,
+ 1 AS `Assigned_Salary`,
+ 1 AS `Contract_Name`,
+ 1 AS `Work_Modality`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_employee_current_job`
+--
+
+DROP TABLE IF EXISTS `v_employee_current_job`;
+/*!50001 DROP VIEW IF EXISTS `v_employee_current_job`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_employee_current_job` AS SELECT 
+ 1 AS `Employee_ID`,
+ 1 AS `Employee_Name`,
+ 1 AS `Gender`,
+ 1 AS `Nationality`,
+ 1 AS `Employment_Status`,
+ 1 AS `DOB`,
+ 1 AS `Age`,
+ 1 AS `First_Join_Date`,
+ 1 AS `Service_Years`,
+ 1 AS `Assignment_ID`,
+ 1 AS `Current_Job_Start_Date`,
+ 1 AS `Current_Job_End_Date`,
+ 1 AS `Assignment_Status`,
+ 1 AS `Assigned_Salary`,
+ 1 AS `Job_ID`,
+ 1 AS `Job_Code`,
+ 1 AS `Job_Title`,
+ 1 AS `Job_Level`,
+ 1 AS `Job_Category`,
+ 1 AS `Job_Grade`,
+ 1 AS `Job_Status`,
+ 1 AS `Department_ID`,
+ 1 AS `Department_Name`,
+ 1 AS `Department_Type`,
+ 1 AS `Department_Location`,
+ 1 AS `Contract_ID`,
+ 1 AS `Contract_Name`,
+ 1 AS `Contract_Type`,
+ 1 AS `Work_Modality`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_employees_by_department`
+--
+
+DROP TABLE IF EXISTS `v_employees_by_department`;
+/*!50001 DROP VIEW IF EXISTS `v_employees_by_department`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_employees_by_department` AS SELECT 
+ 1 AS `Department_ID`,
+ 1 AS `Department_Name`,
+ 1 AS `Employee_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_employment_status_breakdown`
+--
+
+DROP TABLE IF EXISTS `v_employment_status_breakdown`;
+/*!50001 DROP VIEW IF EXISTS `v_employment_status_breakdown`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_employment_status_breakdown` AS SELECT 
+ 1 AS `Employment_Status`,
+ 1 AS `Employee_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_gender_breakdown`
+--
+
+DROP TABLE IF EXISTS `v_gender_breakdown`;
+/*!50001 DROP VIEW IF EXISTS `v_gender_breakdown`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_gender_breakdown` AS SELECT 
+ 1 AS `Gender`,
+ 1 AS `Employee_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_job_dim`
+--
+
+DROP TABLE IF EXISTS `v_job_dim`;
+/*!50001 DROP VIEW IF EXISTS `v_job_dim`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_job_dim` AS SELECT 
+ 1 AS `Job_ID`,
+ 1 AS `Job_Code`,
+ 1 AS `Job_Title`,
+ 1 AS `Job_Level`,
+ 1 AS `Job_Category`,
+ 1 AS `Job_Grade`,
+ 1 AS `Min_Salary`,
+ 1 AS `Max_Salary`,
+ 1 AS `Status_Raw`,
+ 1 AS `Status_Dashboard`,
+ 1 AS `Department_ID`,
+ 1 AS `Department_Name`,
+ 1 AS `Department_Type`,
+ 1 AS `Reports_To`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_jobs_by_level`
+--
+
+DROP TABLE IF EXISTS `v_jobs_by_level`;
+/*!50001 DROP VIEW IF EXISTS `v_jobs_by_level`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_jobs_by_level` AS SELECT 
+ 1 AS `Job_Level`,
+ 1 AS `Jobs_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_kpi_score_summary`
+--
+
+DROP TABLE IF EXISTS `v_kpi_score_summary`;
+/*!50001 DROP VIEW IF EXISTS `v_kpi_score_summary`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_kpi_score_summary` AS SELECT 
+ 1 AS `Cycle_ID`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Department_Name`,
+ 1 AS `KPI_Name`,
+ 1 AS `Avg_Employee_Score`,
+ 1 AS `Total_Weighted_Score`,
+ 1 AS `Submitted_Scores`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_performance_cycles_status`
+--
+
+DROP TABLE IF EXISTS `v_performance_cycles_status`;
+/*!50001 DROP VIEW IF EXISTS `v_performance_cycles_status`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_performance_cycles_status` AS SELECT 
+ 1 AS `Cycle_ID`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Cycle_Type`,
+ 1 AS `Start_Date`,
+ 1 AS `End_Date`,
+ 1 AS `Submission_Deadline`,
+ 1 AS `Is_Open`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_salary_stats_by_category`
+--
+
+DROP TABLE IF EXISTS `v_salary_stats_by_category`;
+/*!50001 DROP VIEW IF EXISTS `v_salary_stats_by_category`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_salary_stats_by_category` AS SELECT 
+ 1 AS `Job_Category`,
+ 1 AS `Min_Salary`,
+ 1 AS `Max_Salary`,
+ 1 AS `Avg_Assigned_Salary`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_training_fact`
+--
+
+DROP TABLE IF EXISTS `v_training_fact`;
+/*!50001 DROP VIEW IF EXISTS `v_training_fact`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_training_fact` AS SELECT 
+ 1 AS `ET_ID`,
+ 1 AS `Employee_ID`,
+ 1 AS `Employee_Name`,
+ 1 AS `Program_ID`,
+ 1 AS `Program_Code`,
+ 1 AS `Program_Title`,
+ 1 AS `Program_Type`,
+ 1 AS `Program_Subtype`,
+ 1 AS `Delivery_Method`,
+ 1 AS `Approval_Status`,
+ 1 AS `Department_Name`,
+ 1 AS `Completion_Status`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_workforce_cards`
+--
+
+DROP TABLE IF EXISTS `v_workforce_cards`;
+/*!50001 DROP VIEW IF EXISTS `v_workforce_cards`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_workforce_cards` AS SELECT 
+ 1 AS `Total_Employees`,
+ 1 AS `Active_Employees`,
+ 1 AS `Average_Employee_Age`,
+ 1 AS `Average_Service_Years`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_active_job_assignments`
+--
+
+DROP TABLE IF EXISTS `vw_active_job_assignments`;
+/*!50001 DROP VIEW IF EXISTS `vw_active_job_assignments`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_active_job_assignments` AS SELECT 
+ 1 AS `Assignment_ID`,
+ 1 AS `Employee_ID`,
+ 1 AS `Employee_Name`,
+ 1 AS `Employment_Status`,
+ 1 AS `Gender`,
+ 1 AS `Department_Name`,
+ 1 AS `Job_Title`,
+ 1 AS `Job_Level`,
+ 1 AS `Job_Category`,
+ 1 AS `Start_Date`,
+ 1 AS `End_Date`,
+ 1 AS `Status`,
+ 1 AS `Assigned_Salary`,
+ 1 AS `Contract_Name`,
+ 1 AS `Work_Modality`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_appraisal_score_by_cycle`
+--
+
+DROP TABLE IF EXISTS `vw_appraisal_score_by_cycle`;
+/*!50001 DROP VIEW IF EXISTS `vw_appraisal_score_by_cycle`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_appraisal_score_by_cycle` AS SELECT 
+ 1 AS `Cycle_ID`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Avg_Appraisal_Score`,
+ 1 AS `Appraisals_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_appraisal_scores_per_cycle`
+--
+
+DROP TABLE IF EXISTS `vw_appraisal_scores_per_cycle`;
+/*!50001 DROP VIEW IF EXISTS `vw_appraisal_scores_per_cycle`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_appraisal_scores_per_cycle` AS SELECT 
+ 1 AS `Cycle_ID`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Avg_Appraisal_Score`,
+ 1 AS `Appraisals_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_appraisal_summary_detail`
+--
+
+DROP TABLE IF EXISTS `vw_appraisal_summary_detail`;
+/*!50001 DROP VIEW IF EXISTS `vw_appraisal_summary_detail`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_appraisal_summary_detail` AS SELECT 
+ 1 AS `Appraisal_ID`,
+ 1 AS `Employee_ID`,
+ 1 AS `Employee_Name`,
+ 1 AS `Department_Name`,
+ 1 AS `Job_Title`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Appraisal_Date`,
+ 1 AS `Overall_Score`,
+ 1 AS `Manager_Comments`,
+ 1 AS `HR_Comments`,
+ 1 AS `Employee_Comments`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_certificates_issued_by_program`
+--
+
+DROP TABLE IF EXISTS `vw_certificates_issued_by_program`;
+/*!50001 DROP VIEW IF EXISTS `vw_certificates_issued_by_program`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_certificates_issued_by_program` AS SELECT 
+ 1 AS `Program_ID`,
+ 1 AS `Program_Code`,
+ 1 AS `Program_Title`,
+ 1 AS `Certificates_Issued`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_current_assignment`
+--
+
+DROP TABLE IF EXISTS `vw_current_assignment`;
+/*!50001 DROP VIEW IF EXISTS `vw_current_assignment`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_current_assignment` AS SELECT 
+ 1 AS `Assignment_ID`,
+ 1 AS `Employee_ID`,
+ 1 AS `Job_ID`,
+ 1 AS `Contract_ID`,
+ 1 AS `Start_Date`,
+ 1 AS `End_Date`,
+ 1 AS `Status`,
+ 1 AS `Assigned_Salary`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_department_structure`
+--
+
+DROP TABLE IF EXISTS `vw_department_structure`;
+/*!50001 DROP VIEW IF EXISTS `vw_department_structure`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_department_structure` AS SELECT 
+ 1 AS `University_Name`,
+ 1 AS `Faculty_Name`,
+ 1 AS `Department_ID`,
+ 1 AS `Department_Name`,
+ 1 AS `Department_Type`,
+ 1 AS `Employee_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_employee_current_job`
+--
+
+DROP TABLE IF EXISTS `vw_employee_current_job`;
+/*!50001 DROP VIEW IF EXISTS `vw_employee_current_job`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_employee_current_job` AS SELECT 
+ 1 AS `Employee_ID`,
+ 1 AS `Employee_Name`,
+ 1 AS `Gender`,
+ 1 AS `Nationality`,
+ 1 AS `Employment_Status`,
+ 1 AS `DOB`,
+ 1 AS `Age`,
+ 1 AS `First_Join_Date`,
+ 1 AS `Service_Years`,
+ 1 AS `Assignment_ID`,
+ 1 AS `Current_Job_Start_Date`,
+ 1 AS `Current_Job_End_Date`,
+ 1 AS `Assignment_Status`,
+ 1 AS `Assigned_Salary`,
+ 1 AS `Job_ID`,
+ 1 AS `Job_Code`,
+ 1 AS `Job_Title`,
+ 1 AS `Job_Level`,
+ 1 AS `Job_Category`,
+ 1 AS `Job_Grade`,
+ 1 AS `Job_Status`,
+ 1 AS `Department_ID`,
+ 1 AS `Department_Name`,
+ 1 AS `Department_Type`,
+ 1 AS `Department_Location`,
+ 1 AS `Contract_ID`,
+ 1 AS `Contract_Name`,
+ 1 AS `Contract_Type`,
+ 1 AS `Work_Modality`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_employee_service_years`
+--
+
+DROP TABLE IF EXISTS `vw_employee_service_years`;
+/*!50001 DROP VIEW IF EXISTS `vw_employee_service_years`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_employee_service_years` AS SELECT 
+ 1 AS `Employee_ID`,
+ 1 AS `First_Join_Date`,
+ 1 AS `Service_End_Date`,
+ 1 AS `Service_Years`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_employees_by_department`
+--
+
+DROP TABLE IF EXISTS `vw_employees_by_department`;
+/*!50001 DROP VIEW IF EXISTS `vw_employees_by_department`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_employees_by_department` AS SELECT 
+ 1 AS `Department_ID`,
+ 1 AS `Department_Name`,
+ 1 AS `Employee_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_employment_status_distribution`
+--
+
+DROP TABLE IF EXISTS `vw_employment_status_distribution`;
+/*!50001 DROP VIEW IF EXISTS `vw_employment_status_distribution`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_employment_status_distribution` AS SELECT 
+ 1 AS `Employment_Status`,
+ 1 AS `Employee_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_full_appraisal_summary`
+--
+
+DROP TABLE IF EXISTS `vw_full_appraisal_summary`;
+/*!50001 DROP VIEW IF EXISTS `vw_full_appraisal_summary`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_full_appraisal_summary` AS SELECT 
+ 1 AS `Appraisal_ID`,
+ 1 AS `Employee_ID`,
+ 1 AS `Employee_Name`,
+ 1 AS `Department_Name`,
+ 1 AS `Job_Title`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Appraisal_Date`,
+ 1 AS `Overall_Score`,
+ 1 AS `Manager_Comments`,
+ 1 AS `HR_Comments`,
+ 1 AS `Employee_Comments`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_gender_distribution`
+--
+
+DROP TABLE IF EXISTS `vw_gender_distribution`;
+/*!50001 DROP VIEW IF EXISTS `vw_gender_distribution`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_gender_distribution` AS SELECT 
+ 1 AS `Gender`,
+ 1 AS `Employee_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_job_cards`
+--
+
+DROP TABLE IF EXISTS `vw_job_cards`;
+/*!50001 DROP VIEW IF EXISTS `vw_job_cards`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_job_cards` AS SELECT 
+ 1 AS `Total_Jobs`,
+ 1 AS `Active_Jobs`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_job_dim`
+--
+
+DROP TABLE IF EXISTS `vw_job_dim`;
+/*!50001 DROP VIEW IF EXISTS `vw_job_dim`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_job_dim` AS SELECT 
+ 1 AS `Job_ID`,
+ 1 AS `Job_Code`,
+ 1 AS `Job_Title`,
+ 1 AS `Job_Level`,
+ 1 AS `Job_Category`,
+ 1 AS `Job_Grade`,
+ 1 AS `Min_Salary`,
+ 1 AS `Max_Salary`,
+ 1 AS `Status_Raw`,
+ 1 AS `Status_Dashboard`,
+ 1 AS `Department_ID`,
+ 1 AS `Department_Name`,
+ 1 AS `Department_Type`,
+ 1 AS `Reports_To`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_job_structure_overview`
+--
+
+DROP TABLE IF EXISTS `vw_job_structure_overview`;
+/*!50001 DROP VIEW IF EXISTS `vw_job_structure_overview`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_job_structure_overview` AS SELECT 
+ 1 AS `Department_Name`,
+ 1 AS `Department_Type`,
+ 1 AS `Job_Level`,
+ 1 AS `Job_Category`,
+ 1 AS `Job_Code`,
+ 1 AS `Job_Title`,
+ 1 AS `Job_Grade`,
+ 1 AS `Min_Salary`,
+ 1 AS `Max_Salary`,
+ 1 AS `Job_Status`,
+ 1 AS `Reports_To_Job_Title`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_jobs_by_level`
+--
+
+DROP TABLE IF EXISTS `vw_jobs_by_level`;
+/*!50001 DROP VIEW IF EXISTS `vw_jobs_by_level`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_jobs_by_level` AS SELECT 
+ 1 AS `Job_Level`,
+ 1 AS `Jobs_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_kpi_completion_rate_by_cycle`
+--
+
+DROP TABLE IF EXISTS `vw_kpi_completion_rate_by_cycle`;
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_completion_rate_by_cycle`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_kpi_completion_rate_by_cycle` AS SELECT 
+ 1 AS `Cycle_ID`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Actual_Scores`,
+ 1 AS `Expected_Scores`,
+ 1 AS `Completion_Rate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_kpi_completion_rate_by_cycle_fixed`
+--
+
+DROP TABLE IF EXISTS `vw_kpi_completion_rate_by_cycle_fixed`;
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_completion_rate_by_cycle_fixed`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_kpi_completion_rate_by_cycle_fixed` AS SELECT 
+ 1 AS `Cycle_ID`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Actual_Scores`,
+ 1 AS `Expected_Scores`,
+ 1 AS `Completion_Rate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_kpi_completion_rate_overall`
+--
+
+DROP TABLE IF EXISTS `vw_kpi_completion_rate_overall`;
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_completion_rate_overall`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_kpi_completion_rate_overall` AS SELECT 
+ 1 AS `Total_KPI_Score_Records`,
+ 1 AS `Submitted_KPI_Score_Records`,
+ 1 AS `KPI_Completion_Rate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_kpi_completion_rate_overall_fixed`
+--
+
+DROP TABLE IF EXISTS `vw_kpi_completion_rate_overall_fixed`;
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_completion_rate_overall_fixed`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_kpi_completion_rate_overall_fixed` AS SELECT 
+ 1 AS `Total_KPI_Score_Records`,
+ 1 AS `Submitted_KPI_Score_Records`,
+ 1 AS `KPI_Completion_Rate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_kpi_fact_dept`
+--
+
+DROP TABLE IF EXISTS `vw_kpi_fact_dept`;
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_fact_dept`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_kpi_fact_dept` AS SELECT 
+ 1 AS `Department_Name`,
+ 1 AS `Cycle_Name`,
+ 1 AS `KPI_Name`,
+ 1 AS `Employee_Score`,
+ 1 AS `Weighted_Score`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_kpi_score_summary`
+--
+
+DROP TABLE IF EXISTS `vw_kpi_score_summary`;
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_score_summary`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_kpi_score_summary` AS SELECT 
+ 1 AS `Cycle_ID`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Department_Name`,
+ 1 AS `KPI_Name`,
+ 1 AS `Avg_Employee_Score`,
+ 1 AS `Total_Weighted_Score`,
+ 1 AS `Submitted_Scores`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_page_perf_training`
+--
+
+DROP TABLE IF EXISTS `vw_page_perf_training`;
+/*!50001 DROP VIEW IF EXISTS `vw_page_perf_training`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_page_perf_training` AS SELECT 
+ 1 AS `Record_Type`,
+ 1 AS `Department_ID`,
+ 1 AS `Department_Name`,
+ 1 AS `Cycle_ID`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Program_Title`,
+ 1 AS `KPI_Name`,
+ 1 AS `KPI_Score`,
+ 1 AS `KPI_Weighted_Score`,
+ 1 AS `Appraisal_Score`,
+ 1 AS `Completion_Status`,
+ 1 AS `Is_Completed`,
+ 1 AS `Has_Certificate`,
+ 1 AS `Employee_ID`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_performance_cards`
+--
+
+DROP TABLE IF EXISTS `vw_performance_cards`;
+/*!50001 DROP VIEW IF EXISTS `vw_performance_cards`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_performance_cards` AS SELECT 
+ 1 AS `Active_Performance_Cycles`,
+ 1 AS `Average_Appraisal_Score`,
+ 1 AS `KPI_Completion_Rate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_performance_cycles_status`
+--
+
+DROP TABLE IF EXISTS `vw_performance_cycles_status`;
+/*!50001 DROP VIEW IF EXISTS `vw_performance_cycles_status`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_performance_cycles_status` AS SELECT 
+ 1 AS `Cycle_ID`,
+ 1 AS `Cycle_Name`,
+ 1 AS `Cycle_Type`,
+ 1 AS `Start_Date`,
+ 1 AS `End_Date`,
+ 1 AS `Submission_Deadline`,
+ 1 AS `Is_Open`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_salary_stats_by_job_category`
+--
+
+DROP TABLE IF EXISTS `vw_salary_stats_by_job_category`;
+/*!50001 DROP VIEW IF EXISTS `vw_salary_stats_by_job_category`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_salary_stats_by_job_category` AS SELECT 
+ 1 AS `Job_Category`,
+ 1 AS `Avg_Min_Salary`,
+ 1 AS `Avg_Max_Salary`,
+ 1 AS `Avg_Assigned_Salary`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_training_cards`
+--
+
+DROP TABLE IF EXISTS `vw_training_cards`;
+/*!50001 DROP VIEW IF EXISTS `vw_training_cards`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_training_cards` AS SELECT 
+ 1 AS `Total_Training_Programs`,
+ 1 AS `Total_Certificates_Issued`,
+ 1 AS `Training_Completion_Rate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_training_completion_per_program`
+--
+
+DROP TABLE IF EXISTS `vw_training_completion_per_program`;
+/*!50001 DROP VIEW IF EXISTS `vw_training_completion_per_program`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_training_completion_per_program` AS SELECT 
+ 1 AS `Program_ID`,
+ 1 AS `Program_Code`,
+ 1 AS `Program_Title`,
+ 1 AS `Completed_Count`,
+ 1 AS `Total_Assignments`,
+ 1 AS `Completion_Rate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_training_completion_rate_overall`
+--
+
+DROP TABLE IF EXISTS `vw_training_completion_rate_overall`;
+/*!50001 DROP VIEW IF EXISTS `vw_training_completion_rate_overall`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_training_completion_rate_overall` AS SELECT 
+ 1 AS `Total_Training_Enrollments`,
+ 1 AS `Completed_Enrollments`,
+ 1 AS `Training_Completion_Rate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_training_fact`
+--
+
+DROP TABLE IF EXISTS `vw_training_fact`;
+/*!50001 DROP VIEW IF EXISTS `vw_training_fact`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_training_fact` AS SELECT 
+ 1 AS `ET_ID`,
+ 1 AS `Employee_ID`,
+ 1 AS `Employee_Name`,
+ 1 AS `Program_ID`,
+ 1 AS `Program_Code`,
+ 1 AS `Program_Title`,
+ 1 AS `Program_Type`,
+ 1 AS `Program_Subtype`,
+ 1 AS `Delivery_Method`,
+ 1 AS `Approval_Status`,
+ 1 AS `Department_Name`,
+ 1 AS `Completion_Status`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_training_fact_dept`
+--
+
+DROP TABLE IF EXISTS `vw_training_fact_dept`;
+/*!50001 DROP VIEW IF EXISTS `vw_training_fact_dept`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_training_fact_dept` AS SELECT 
+ 1 AS `Department_Name`,
+ 1 AS `Program_Title`,
+ 1 AS `Employee_ID`,
+ 1 AS `Completion_Status`,
+ 1 AS `Has_Certificate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_training_participation`
+--
+
+DROP TABLE IF EXISTS `vw_training_participation`;
+/*!50001 DROP VIEW IF EXISTS `vw_training_participation`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_training_participation` AS SELECT 
+ 1 AS `Program_ID`,
+ 1 AS `Program_Code`,
+ 1 AS `Program_Title`,
+ 1 AS `Participants_Count`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_workforce_cards`
+--
+
+DROP TABLE IF EXISTS `vw_workforce_cards`;
+/*!50001 DROP VIEW IF EXISTS `vw_workforce_cards`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_workforce_cards` AS SELECT 
+ 1 AS `Total_Employees`,
+ 1 AS `Active_Employees`,
+ 1 AS `Average_Employee_Age`,
+ 1 AS `Average_Service_Years`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Final view structure for view `dim_department`
+--
+
+/*!50001 DROP VIEW IF EXISTS `dim_department`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `dim_department` AS select `department`.`Department_ID` AS `Department_ID`,`department`.`Department_Name` AS `Department_Name`,`department`.`Department_Type` AS `Department_Type` from `department` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `fact_appraisal`
+--
+
+/*!50001 DROP VIEW IF EXISTS `fact_appraisal`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `fact_appraisal` AS select `d`.`Department_ID` AS `Department_ID`,`d`.`Department_Name` AS `Department_Name`,`pc`.`Cycle_ID` AS `Cycle_ID`,`pc`.`Cycle_Name` AS `Cycle_Name`,`a`.`Appraisal_ID` AS `Appraisal_ID`,`a`.`Appraisal_Date` AS `Appraisal_Date`,`a`.`Overall_Score` AS `Overall_Score` from ((((`appraisal` `a` join `performance_cycle` `pc` on((`pc`.`Cycle_ID` = `a`.`Cycle_ID`))) join `job_assignment` `ja` on((`ja`.`Assignment_ID` = `a`.`Assignment_ID`))) join `job` `j` on((`j`.`Job_ID` = `ja`.`Job_ID`))) join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `fact_kpi`
+--
+
+/*!50001 DROP VIEW IF EXISTS `fact_kpi`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `fact_kpi` AS select `d`.`Department_ID` AS `Department_ID`,`d`.`Department_Name` AS `Department_Name`,`pc`.`Cycle_ID` AS `Cycle_ID`,`pc`.`Cycle_Name` AS `Cycle_Name`,`ok`.`KPI_ID` AS `KPI_ID`,`ok`.`KPI_Name` AS `KPI_Name`,`eks`.`Employee_Score` AS `Employee_Score`,`eks`.`Weighted_Score` AS `Weighted_Score` from (((((`employee_kpi_score` `eks` join `performance_cycle` `pc` on((`pc`.`Cycle_ID` = `eks`.`Performance_Cycle_ID`))) join `objective_kpi` `ok` on((`ok`.`KPI_ID` = `eks`.`KPI_ID`))) join `job_assignment` `ja` on((`ja`.`Assignment_ID` = `eks`.`Assignment_ID`))) join `job` `j` on((`j`.`Job_ID` = `ja`.`Job_ID`))) join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `fact_training`
+--
+
+/*!50001 DROP VIEW IF EXISTS `fact_training`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `fact_training` AS select `ecj`.`Department_ID` AS `Department_ID`,`ecj`.`Department_Name` AS `Department_Name`,`tp`.`Program_ID` AS `Program_ID`,`tp`.`Title` AS `Program_Title`,`et`.`Employee_ID` AS `Employee_ID`,`et`.`Completion_Status` AS `Completion_Status`,(case when (`tc`.`Certificate_ID` is not null) then 1 else 0 end) AS `Has_Certificate` from (((`employee_training` `et` join `training_program` `tp` on((`tp`.`Program_ID` = `et`.`Program_ID`))) join `vw_employee_current_job` `ecj` on((`ecj`.`Employee_ID` = `et`.`Employee_ID`))) left join `training_certificate` `tc` on((`tc`.`ET_ID` = `et`.`ET_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_active_job_assignments`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_active_job_assignments`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_active_job_assignments` AS select `vw_active_job_assignments`.`Assignment_ID` AS `Assignment_ID`,`vw_active_job_assignments`.`Employee_ID` AS `Employee_ID`,`vw_active_job_assignments`.`Employee_Name` AS `Employee_Name`,`vw_active_job_assignments`.`Employment_Status` AS `Employment_Status`,`vw_active_job_assignments`.`Gender` AS `Gender`,`vw_active_job_assignments`.`Department_Name` AS `Department_Name`,`vw_active_job_assignments`.`Job_Title` AS `Job_Title`,`vw_active_job_assignments`.`Job_Level` AS `Job_Level`,`vw_active_job_assignments`.`Job_Category` AS `Job_Category`,`vw_active_job_assignments`.`Start_Date` AS `Start_Date`,`vw_active_job_assignments`.`End_Date` AS `End_Date`,`vw_active_job_assignments`.`Status` AS `Status`,`vw_active_job_assignments`.`Assigned_Salary` AS `Assigned_Salary`,`vw_active_job_assignments`.`Contract_Name` AS `Contract_Name`,`vw_active_job_assignments`.`Work_Modality` AS `Work_Modality` from `vw_active_job_assignments` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_employee_current_job`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_employee_current_job`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_employee_current_job` AS select `vw_employee_current_job`.`Employee_ID` AS `Employee_ID`,`vw_employee_current_job`.`Employee_Name` AS `Employee_Name`,`vw_employee_current_job`.`Gender` AS `Gender`,`vw_employee_current_job`.`Nationality` AS `Nationality`,`vw_employee_current_job`.`Employment_Status` AS `Employment_Status`,`vw_employee_current_job`.`DOB` AS `DOB`,`vw_employee_current_job`.`Age` AS `Age`,`vw_employee_current_job`.`First_Join_Date` AS `First_Join_Date`,`vw_employee_current_job`.`Service_Years` AS `Service_Years`,`vw_employee_current_job`.`Assignment_ID` AS `Assignment_ID`,`vw_employee_current_job`.`Current_Job_Start_Date` AS `Current_Job_Start_Date`,`vw_employee_current_job`.`Current_Job_End_Date` AS `Current_Job_End_Date`,`vw_employee_current_job`.`Assignment_Status` AS `Assignment_Status`,`vw_employee_current_job`.`Assigned_Salary` AS `Assigned_Salary`,`vw_employee_current_job`.`Job_ID` AS `Job_ID`,`vw_employee_current_job`.`Job_Code` AS `Job_Code`,`vw_employee_current_job`.`Job_Title` AS `Job_Title`,`vw_employee_current_job`.`Job_Level` AS `Job_Level`,`vw_employee_current_job`.`Job_Category` AS `Job_Category`,`vw_employee_current_job`.`Job_Grade` AS `Job_Grade`,`vw_employee_current_job`.`Job_Status` AS `Job_Status`,`vw_employee_current_job`.`Department_ID` AS `Department_ID`,`vw_employee_current_job`.`Department_Name` AS `Department_Name`,`vw_employee_current_job`.`Department_Type` AS `Department_Type`,`vw_employee_current_job`.`Department_Location` AS `Department_Location`,`vw_employee_current_job`.`Contract_ID` AS `Contract_ID`,`vw_employee_current_job`.`Contract_Name` AS `Contract_Name`,`vw_employee_current_job`.`Contract_Type` AS `Contract_Type`,`vw_employee_current_job`.`Work_Modality` AS `Work_Modality` from `vw_employee_current_job` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_employees_by_department`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_employees_by_department`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_employees_by_department` AS select `vw_employees_by_department`.`Department_ID` AS `Department_ID`,`vw_employees_by_department`.`Department_Name` AS `Department_Name`,`vw_employees_by_department`.`Employee_Count` AS `Employee_Count` from `vw_employees_by_department` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_employment_status_breakdown`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_employment_status_breakdown`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_employment_status_breakdown` AS select `vw_employment_status_distribution`.`Employment_Status` AS `Employment_Status`,`vw_employment_status_distribution`.`Employee_Count` AS `Employee_Count` from `vw_employment_status_distribution` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_gender_breakdown`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_gender_breakdown`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_gender_breakdown` AS select `vw_gender_distribution`.`Gender` AS `Gender`,`vw_gender_distribution`.`Employee_Count` AS `Employee_Count` from `vw_gender_distribution` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_job_dim`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_job_dim`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_job_dim` AS select `vw_job_dim`.`Job_ID` AS `Job_ID`,`vw_job_dim`.`Job_Code` AS `Job_Code`,`vw_job_dim`.`Job_Title` AS `Job_Title`,`vw_job_dim`.`Job_Level` AS `Job_Level`,`vw_job_dim`.`Job_Category` AS `Job_Category`,`vw_job_dim`.`Job_Grade` AS `Job_Grade`,`vw_job_dim`.`Min_Salary` AS `Min_Salary`,`vw_job_dim`.`Max_Salary` AS `Max_Salary`,`vw_job_dim`.`Status_Raw` AS `Status_Raw`,`vw_job_dim`.`Status_Dashboard` AS `Status_Dashboard`,`vw_job_dim`.`Department_ID` AS `Department_ID`,`vw_job_dim`.`Department_Name` AS `Department_Name`,`vw_job_dim`.`Department_Type` AS `Department_Type`,`vw_job_dim`.`Reports_To` AS `Reports_To` from `vw_job_dim` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_jobs_by_level`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_jobs_by_level`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_jobs_by_level` AS select `vw_jobs_by_level`.`Job_Level` AS `Job_Level`,`vw_jobs_by_level`.`Jobs_Count` AS `Jobs_Count` from `vw_jobs_by_level` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_kpi_score_summary`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_kpi_score_summary`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_kpi_score_summary` AS select `vw_kpi_score_summary`.`Cycle_ID` AS `Cycle_ID`,`vw_kpi_score_summary`.`Cycle_Name` AS `Cycle_Name`,`vw_kpi_score_summary`.`Department_Name` AS `Department_Name`,`vw_kpi_score_summary`.`KPI_Name` AS `KPI_Name`,`vw_kpi_score_summary`.`Avg_Employee_Score` AS `Avg_Employee_Score`,`vw_kpi_score_summary`.`Total_Weighted_Score` AS `Total_Weighted_Score`,`vw_kpi_score_summary`.`Submitted_Scores` AS `Submitted_Scores` from `vw_kpi_score_summary` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_performance_cycles_status`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_performance_cycles_status`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_performance_cycles_status` AS select `vw_performance_cycles_status`.`Cycle_ID` AS `Cycle_ID`,`vw_performance_cycles_status`.`Cycle_Name` AS `Cycle_Name`,`vw_performance_cycles_status`.`Cycle_Type` AS `Cycle_Type`,`vw_performance_cycles_status`.`Start_Date` AS `Start_Date`,`vw_performance_cycles_status`.`End_Date` AS `End_Date`,`vw_performance_cycles_status`.`Submission_Deadline` AS `Submission_Deadline`,`vw_performance_cycles_status`.`Is_Open` AS `Is_Open` from `vw_performance_cycles_status` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_salary_stats_by_category`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_salary_stats_by_category`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_salary_stats_by_category` AS select `vw_salary_stats_by_job_category`.`Job_Category` AS `Job_Category`,`vw_salary_stats_by_job_category`.`Avg_Min_Salary` AS `Min_Salary`,`vw_salary_stats_by_job_category`.`Avg_Max_Salary` AS `Max_Salary`,`vw_salary_stats_by_job_category`.`Avg_Assigned_Salary` AS `Avg_Assigned_Salary` from `vw_salary_stats_by_job_category` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_training_fact`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_training_fact`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_training_fact` AS select `vw_training_fact`.`ET_ID` AS `ET_ID`,`vw_training_fact`.`Employee_ID` AS `Employee_ID`,`vw_training_fact`.`Employee_Name` AS `Employee_Name`,`vw_training_fact`.`Program_ID` AS `Program_ID`,`vw_training_fact`.`Program_Code` AS `Program_Code`,`vw_training_fact`.`Program_Title` AS `Program_Title`,`vw_training_fact`.`Program_Type` AS `Program_Type`,`vw_training_fact`.`Program_Subtype` AS `Program_Subtype`,`vw_training_fact`.`Delivery_Method` AS `Delivery_Method`,`vw_training_fact`.`Approval_Status` AS `Approval_Status`,`vw_training_fact`.`Department_Name` AS `Department_Name`,`vw_training_fact`.`Completion_Status` AS `Completion_Status` from `vw_training_fact` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_workforce_cards`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_workforce_cards`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_workforce_cards` AS select `vw_workforce_cards`.`Total_Employees` AS `Total_Employees`,`vw_workforce_cards`.`Active_Employees` AS `Active_Employees`,`vw_workforce_cards`.`Average_Employee_Age` AS `Average_Employee_Age`,`vw_workforce_cards`.`Average_Service_Years` AS `Average_Service_Years` from `vw_workforce_cards` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_active_job_assignments`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_active_job_assignments`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_active_job_assignments` AS select `ca`.`Assignment_ID` AS `Assignment_ID`,`ecj`.`Employee_ID` AS `Employee_ID`,`ecj`.`Employee_Name` AS `Employee_Name`,`ecj`.`Employment_Status` AS `Employment_Status`,`ecj`.`Gender` AS `Gender`,`ecj`.`Department_Name` AS `Department_Name`,`ecj`.`Job_Title` AS `Job_Title`,`ecj`.`Job_Level` AS `Job_Level`,`ecj`.`Job_Category` AS `Job_Category`,`ca`.`Start_Date` AS `Start_Date`,`ca`.`End_Date` AS `End_Date`,`ca`.`Status` AS `Status`,`ca`.`Assigned_Salary` AS `Assigned_Salary`,`ecj`.`Contract_Name` AS `Contract_Name`,`ecj`.`Work_Modality` AS `Work_Modality` from (`vw_current_assignment` `ca` join `vw_employee_current_job` `ecj` on((`ecj`.`Assignment_ID` = `ca`.`Assignment_ID`))) where ((`ca`.`Status` = 'Active') or (`ca`.`Status` is null)) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_appraisal_score_by_cycle`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_appraisal_score_by_cycle`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_appraisal_score_by_cycle` AS select `pc`.`Cycle_ID` AS `Cycle_ID`,`pc`.`Cycle_Name` AS `Cycle_Name`,round(avg(`a`.`Overall_Score`),2) AS `Avg_Appraisal_Score`,count(0) AS `Appraisals_Count` from (`appraisal` `a` left join `performance_cycle` `pc` on((`pc`.`Cycle_ID` = `a`.`Cycle_ID`))) group by `pc`.`Cycle_ID`,`pc`.`Cycle_Name` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_appraisal_scores_per_cycle`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_appraisal_scores_per_cycle`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_appraisal_scores_per_cycle` AS select `vw_appraisal_score_by_cycle`.`Cycle_ID` AS `Cycle_ID`,`vw_appraisal_score_by_cycle`.`Cycle_Name` AS `Cycle_Name`,`vw_appraisal_score_by_cycle`.`Avg_Appraisal_Score` AS `Avg_Appraisal_Score`,`vw_appraisal_score_by_cycle`.`Appraisals_Count` AS `Appraisals_Count` from `vw_appraisal_score_by_cycle` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_appraisal_summary_detail`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_appraisal_summary_detail`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_appraisal_summary_detail` AS select `a`.`Appraisal_ID` AS `Appraisal_ID`,`e`.`Employee_ID` AS `Employee_ID`,concat_ws(' ',`e`.`First_Name`,`e`.`Middle_Name`,`e`.`Last_Name`) AS `Employee_Name`,`d`.`Department_Name` AS `Department_Name`,`j`.`Job_Title` AS `Job_Title`,`pc`.`Cycle_Name` AS `Cycle_Name`,`a`.`Appraisal_Date` AS `Appraisal_Date`,`a`.`Overall_Score` AS `Overall_Score`,`a`.`Manager_Comments` AS `Manager_Comments`,`a`.`HR_Comments` AS `HR_Comments`,`a`.`Employee_Comments` AS `Employee_Comments` from (((((`appraisal` `a` left join `job_assignment` `ja` on((`ja`.`Assignment_ID` = `a`.`Assignment_ID`))) left join `employee` `e` on((`e`.`Employee_ID` = `ja`.`Employee_ID`))) left join `job` `j` on((`j`.`Job_ID` = `ja`.`Job_ID`))) left join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) left join `performance_cycle` `pc` on((`pc`.`Cycle_ID` = `a`.`Cycle_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_certificates_issued_by_program`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_certificates_issued_by_program`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_certificates_issued_by_program` AS select `tp`.`Program_ID` AS `Program_ID`,`tp`.`Program_Code` AS `Program_Code`,`tp`.`Title` AS `Program_Title`,count(`tc`.`Certificate_ID`) AS `Certificates_Issued` from ((`training_certificate` `tc` join `employee_training` `et` on((`et`.`ET_ID` = `tc`.`ET_ID`))) join `training_program` `tp` on((`tp`.`Program_ID` = `et`.`Program_ID`))) group by `tp`.`Program_ID`,`tp`.`Program_Code`,`tp`.`Title` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_current_assignment`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_current_assignment`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_current_assignment` AS select `ja`.`Assignment_ID` AS `Assignment_ID`,`ja`.`Employee_ID` AS `Employee_ID`,`ja`.`Job_ID` AS `Job_ID`,`ja`.`Contract_ID` AS `Contract_ID`,`ja`.`Start_Date` AS `Start_Date`,`ja`.`End_Date` AS `End_Date`,`ja`.`Status` AS `Status`,`ja`.`Assigned_Salary` AS `Assigned_Salary` from (`job_assignment` `ja` join (select `job_assignment`.`Employee_ID` AS `Employee_ID`,max(`job_assignment`.`Start_Date`) AS `Max_Start_Date` from `job_assignment` where ((`job_assignment`.`End_Date` is null) or (`job_assignment`.`End_Date` >= curdate())) group by `job_assignment`.`Employee_ID`) `x` on(((`x`.`Employee_ID` = `ja`.`Employee_ID`) and (`ja`.`Start_Date` = `x`.`Max_Start_Date`)))) where ((`ja`.`End_Date` is null) or (`ja`.`End_Date` >= curdate())) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_department_structure`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_department_structure`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_department_structure` AS select `u`.`University_Name` AS `University_Name`,`f`.`Faculty_Name` AS `Faculty_Name`,`d`.`Department_ID` AS `Department_ID`,`d`.`Department_Name` AS `Department_Name`,`d`.`Department_Type` AS `Department_Type`,coalesce(`ed`.`Employee_Count`,0) AS `Employee_Count` from ((((`academic_department` `ad` join `faculty` `f` on((`f`.`Faculty_ID` = `ad`.`Faculty_ID`))) join `university` `u` on((`u`.`University_ID` = `f`.`University_ID`))) join `department` `d` on((`d`.`Department_ID` = `ad`.`Department_ID`))) left join `vw_employees_by_department` `ed` on((`ed`.`Department_ID` = `d`.`Department_ID`))) union all select `u`.`University_Name` AS `University_Name`,NULL AS `Faculty_Name`,`d`.`Department_ID` AS `Department_ID`,`d`.`Department_Name` AS `Department_Name`,`d`.`Department_Type` AS `Department_Type`,coalesce(`ed`.`Employee_Count`,0) AS `Employee_Count` from (((`administrative_department` `adm` join `university` `u` on((`u`.`University_ID` = `adm`.`University_ID`))) join `department` `d` on((`d`.`Department_ID` = `adm`.`Department_ID`))) left join `vw_employees_by_department` `ed` on((`ed`.`Department_ID` = `d`.`Department_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_employee_current_job`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_employee_current_job`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_employee_current_job` AS select `e`.`Employee_ID` AS `Employee_ID`,concat_ws(' ',`e`.`First_Name`,`e`.`Middle_Name`,`e`.`Last_Name`) AS `Employee_Name`,`e`.`Gender` AS `Gender`,`e`.`Nationality` AS `Nationality`,`e`.`Employment_Status` AS `Employment_Status`,`e`.`DOB` AS `DOB`,timestampdiff(YEAR,`e`.`DOB`,curdate()) AS `Age`,`sy`.`First_Join_Date` AS `First_Join_Date`,`sy`.`Service_Years` AS `Service_Years`,`ca`.`Assignment_ID` AS `Assignment_ID`,`ca`.`Start_Date` AS `Current_Job_Start_Date`,`ca`.`End_Date` AS `Current_Job_End_Date`,`ca`.`Status` AS `Assignment_Status`,`ca`.`Assigned_Salary` AS `Assigned_Salary`,`j`.`Job_ID` AS `Job_ID`,`j`.`Job_Code` AS `Job_Code`,`j`.`Job_Title` AS `Job_Title`,`j`.`Job_Level` AS `Job_Level`,`j`.`Job_Category` AS `Job_Category`,`j`.`Job_Grade` AS `Job_Grade`,`j`.`Status` AS `Job_Status`,`d`.`Department_ID` AS `Department_ID`,`d`.`Department_Name` AS `Department_Name`,`d`.`Department_Type` AS `Department_Type`,`d`.`Location` AS `Department_Location`,`c`.`Contract_ID` AS `Contract_ID`,`c`.`Contract_Name` AS `Contract_Name`,`c`.`Type` AS `Contract_Type`,`c`.`Work_Modality` AS `Work_Modality` from (((((`employee` `e` left join `vw_employee_service_years` `sy` on((`sy`.`Employee_ID` = `e`.`Employee_ID`))) left join `vw_current_assignment` `ca` on((`ca`.`Employee_ID` = `e`.`Employee_ID`))) left join `job` `j` on((`j`.`Job_ID` = `ca`.`Job_ID`))) left join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) left join `contract` `c` on((`c`.`Contract_ID` = `ca`.`Contract_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_employee_service_years`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_employee_service_years`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_employee_service_years` AS select `ja`.`Employee_ID` AS `Employee_ID`,min(`ja`.`Start_Date`) AS `First_Join_Date`,max(coalesce(`ja`.`End_Date`,curdate())) AS `Service_End_Date`,round((timestampdiff(DAY,min(`ja`.`Start_Date`),max(coalesce(`ja`.`End_Date`,curdate()))) / 365.25),2) AS `Service_Years` from `job_assignment` `ja` where (`ja`.`Start_Date` is not null) group by `ja`.`Employee_ID` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_employees_by_department`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_employees_by_department`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_employees_by_department` AS select `vw_employee_current_job`.`Department_ID` AS `Department_ID`,`vw_employee_current_job`.`Department_Name` AS `Department_Name`,count(distinct `vw_employee_current_job`.`Employee_ID`) AS `Employee_Count` from `vw_employee_current_job` group by `vw_employee_current_job`.`Department_ID`,`vw_employee_current_job`.`Department_Name` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_employment_status_distribution`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_employment_status_distribution`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_employment_status_distribution` AS select `employee`.`Employment_Status` AS `Employment_Status`,count(0) AS `Employee_Count` from `employee` group by `employee`.`Employment_Status` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_full_appraisal_summary`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_full_appraisal_summary`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_full_appraisal_summary` AS select `vw_appraisal_summary_detail`.`Appraisal_ID` AS `Appraisal_ID`,`vw_appraisal_summary_detail`.`Employee_ID` AS `Employee_ID`,`vw_appraisal_summary_detail`.`Employee_Name` AS `Employee_Name`,`vw_appraisal_summary_detail`.`Department_Name` AS `Department_Name`,`vw_appraisal_summary_detail`.`Job_Title` AS `Job_Title`,`vw_appraisal_summary_detail`.`Cycle_Name` AS `Cycle_Name`,`vw_appraisal_summary_detail`.`Appraisal_Date` AS `Appraisal_Date`,`vw_appraisal_summary_detail`.`Overall_Score` AS `Overall_Score`,`vw_appraisal_summary_detail`.`Manager_Comments` AS `Manager_Comments`,`vw_appraisal_summary_detail`.`HR_Comments` AS `HR_Comments`,`vw_appraisal_summary_detail`.`Employee_Comments` AS `Employee_Comments` from `vw_appraisal_summary_detail` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_gender_distribution`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_gender_distribution`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_gender_distribution` AS select `employee`.`Gender` AS `Gender`,count(0) AS `Employee_Count` from `employee` group by `employee`.`Gender` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_job_cards`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_job_cards`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_job_cards` AS select count(0) AS `Total_Jobs`,sum((case when (`job`.`Status` = 'Open') then 1 else 0 end)) AS `Active_Jobs` from `job` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_job_dim`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_job_dim`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_job_dim` AS select `j`.`Job_ID` AS `Job_ID`,`j`.`Job_Code` AS `Job_Code`,`j`.`Job_Title` AS `Job_Title`,`j`.`Job_Level` AS `Job_Level`,`j`.`Job_Category` AS `Job_Category`,`j`.`Job_Grade` AS `Job_Grade`,`j`.`Min_Salary` AS `Min_Salary`,`j`.`Max_Salary` AS `Max_Salary`,`j`.`Status` AS `Status_Raw`,(case when (`j`.`Status` = 'Open') then 'Active' else 'Inactive' end) AS `Status_Dashboard`,`j`.`Department_ID` AS `Department_ID`,`d`.`Department_Name` AS `Department_Name`,`d`.`Department_Type` AS `Department_Type`,`j`.`Reports_To` AS `Reports_To` from (`job` `j` left join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_job_structure_overview`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_job_structure_overview`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_job_structure_overview` AS select `d`.`Department_Name` AS `Department_Name`,`d`.`Department_Type` AS `Department_Type`,`j`.`Job_Level` AS `Job_Level`,`j`.`Job_Category` AS `Job_Category`,`j`.`Job_Code` AS `Job_Code`,`j`.`Job_Title` AS `Job_Title`,`j`.`Job_Grade` AS `Job_Grade`,`j`.`Min_Salary` AS `Min_Salary`,`j`.`Max_Salary` AS `Max_Salary`,`j`.`Status` AS `Job_Status`,`p`.`Job_Title` AS `Reports_To_Job_Title` from ((`job` `j` left join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) left join `job` `p` on((`p`.`Job_ID` = `j`.`Reports_To`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_jobs_by_level`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_jobs_by_level`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_jobs_by_level` AS select `job`.`Job_Level` AS `Job_Level`,count(0) AS `Jobs_Count` from `job` group by `job`.`Job_Level` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_kpi_completion_rate_by_cycle`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_completion_rate_by_cycle`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_kpi_completion_rate_by_cycle` AS select `pc`.`Cycle_ID` AS `Cycle_ID`,`pc`.`Cycle_Name` AS `Cycle_Name`,sum(coalesce(`a`.`Actual_Scores`,0)) AS `Actual_Scores`,sum(coalesce(`kc`.`KPIs_Per_Job`,0)) AS `Expected_Scores`,round((sum(coalesce(`a`.`Actual_Scores`,0)) / nullif(sum(coalesce(`kc`.`KPIs_Per_Job`,0)),0)),4) AS `Completion_Rate` from (((`performance_cycle` `pc` join `job_assignment` `ja` on(((`ja`.`Start_Date` <= coalesce(`pc`.`End_Date`,`pc`.`Submission_Deadline`,curdate())) and ((`ja`.`End_Date` is null) or (`ja`.`End_Date` >= coalesce(`pc`.`Start_Date`,'1900-01-01')))))) left join (select `employee_kpi_score`.`Performance_Cycle_ID` AS `Performance_Cycle_ID`,`employee_kpi_score`.`Assignment_ID` AS `Assignment_ID`,count(distinct `employee_kpi_score`.`KPI_ID`) AS `Actual_Scores` from `employee_kpi_score` where (`employee_kpi_score`.`Employee_Score` is not null) group by `employee_kpi_score`.`Performance_Cycle_ID`,`employee_kpi_score`.`Assignment_ID`) `a` on(((`a`.`Performance_Cycle_ID` = `pc`.`Cycle_ID`) and (`a`.`Assignment_ID` = `ja`.`Assignment_ID`)))) left join (select `jo`.`Job_ID` AS `Job_ID`,count(`ok`.`KPI_ID`) AS `KPIs_Per_Job` from (`job_objective` `jo` join `objective_kpi` `ok` on((`ok`.`Objective_ID` = `jo`.`Objective_ID`))) group by `jo`.`Job_ID`) `kc` on((`kc`.`Job_ID` = `ja`.`Job_ID`))) group by `pc`.`Cycle_ID`,`pc`.`Cycle_Name` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_kpi_completion_rate_by_cycle_fixed`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_completion_rate_by_cycle_fixed`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_kpi_completion_rate_by_cycle_fixed` AS select `vw_kpi_completion_rate_by_cycle`.`Cycle_ID` AS `Cycle_ID`,`vw_kpi_completion_rate_by_cycle`.`Cycle_Name` AS `Cycle_Name`,`vw_kpi_completion_rate_by_cycle`.`Actual_Scores` AS `Actual_Scores`,`vw_kpi_completion_rate_by_cycle`.`Expected_Scores` AS `Expected_Scores`,`vw_kpi_completion_rate_by_cycle`.`Completion_Rate` AS `Completion_Rate` from `vw_kpi_completion_rate_by_cycle` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_kpi_completion_rate_overall`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_completion_rate_overall`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_kpi_completion_rate_overall` AS select count(0) AS `Total_KPI_Score_Records`,sum((`employee_kpi_score`.`Employee_Score` is not null)) AS `Submitted_KPI_Score_Records`,round((sum((`employee_kpi_score`.`Employee_Score` is not null)) / nullif(count(0),0)),4) AS `KPI_Completion_Rate` from `employee_kpi_score` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_kpi_completion_rate_overall_fixed`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_completion_rate_overall_fixed`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_kpi_completion_rate_overall_fixed` AS select `vw_kpi_completion_rate_overall`.`Total_KPI_Score_Records` AS `Total_KPI_Score_Records`,`vw_kpi_completion_rate_overall`.`Submitted_KPI_Score_Records` AS `Submitted_KPI_Score_Records`,`vw_kpi_completion_rate_overall`.`KPI_Completion_Rate` AS `KPI_Completion_Rate` from `vw_kpi_completion_rate_overall` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_kpi_fact_dept`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_fact_dept`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_kpi_fact_dept` AS select `d`.`Department_Name` AS `Department_Name`,`pc`.`Cycle_Name` AS `Cycle_Name`,`ok`.`KPI_Name` AS `KPI_Name`,`eks`.`Employee_Score` AS `Employee_Score`,`eks`.`Weighted_Score` AS `Weighted_Score` from (((((`employee_kpi_score` `eks` join `performance_cycle` `pc` on((`pc`.`Cycle_ID` = `eks`.`Performance_Cycle_ID`))) join `objective_kpi` `ok` on((`ok`.`KPI_ID` = `eks`.`KPI_ID`))) join `job_assignment` `ja` on((`ja`.`Assignment_ID` = `eks`.`Assignment_ID`))) join `job` `j` on((`j`.`Job_ID` = `ja`.`Job_ID`))) join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_kpi_score_summary`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_kpi_score_summary`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_kpi_score_summary` AS select `s`.`Performance_Cycle_ID` AS `Cycle_ID`,`pc`.`Cycle_Name` AS `Cycle_Name`,`d`.`Department_Name` AS `Department_Name`,`ok`.`KPI_Name` AS `KPI_Name`,round(avg(`s`.`Employee_Score`),2) AS `Avg_Employee_Score`,round(sum(`s`.`Weighted_Score`),2) AS `Total_Weighted_Score`,count(0) AS `Submitted_Scores` from (((((`employee_kpi_score` `s` left join `performance_cycle` `pc` on((`pc`.`Cycle_ID` = `s`.`Performance_Cycle_ID`))) left join `job_assignment` `ja` on((`ja`.`Assignment_ID` = `s`.`Assignment_ID`))) left join `job` `j` on((`j`.`Job_ID` = `ja`.`Job_ID`))) left join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) left join `objective_kpi` `ok` on((`ok`.`KPI_ID` = `s`.`KPI_ID`))) group by `s`.`Performance_Cycle_ID`,`pc`.`Cycle_Name`,`d`.`Department_Name`,`ok`.`KPI_Name` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_page_perf_training`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_page_perf_training`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_page_perf_training` AS select 'KPI' AS `Record_Type`,cast(`d`.`Department_ID` as signed) AS `Department_ID`,`d`.`Department_Name` AS `Department_Name`,cast(`pc`.`Cycle_ID` as signed) AS `Cycle_ID`,`pc`.`Cycle_Name` AS `Cycle_Name`,NULL AS `Program_Title`,`ok`.`KPI_Name` AS `KPI_Name`,cast(`eks`.`Employee_Score` as decimal(10,2)) AS `KPI_Score`,cast(`eks`.`Weighted_Score` as decimal(10,2)) AS `KPI_Weighted_Score`,NULL AS `Appraisal_Score`,NULL AS `Completion_Status`,NULL AS `Is_Completed`,NULL AS `Has_Certificate`,cast(`ja`.`Employee_ID` as signed) AS `Employee_ID` from (((((`employee_kpi_score` `eks` join `performance_cycle` `pc` on((`pc`.`Cycle_ID` = `eks`.`Performance_Cycle_ID`))) join `objective_kpi` `ok` on((`ok`.`KPI_ID` = `eks`.`KPI_ID`))) join `job_assignment` `ja` on((`ja`.`Assignment_ID` = `eks`.`Assignment_ID`))) join `job` `j` on((`j`.`Job_ID` = `ja`.`Job_ID`))) join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) union all select 'APPRAISAL' AS `Record_Type`,cast(`d`.`Department_ID` as signed) AS `Department_ID`,`d`.`Department_Name` AS `Department_Name`,cast(`pc`.`Cycle_ID` as signed) AS `Cycle_ID`,`pc`.`Cycle_Name` AS `Cycle_Name`,NULL AS `Program_Title`,NULL AS `KPI_Name`,NULL AS `KPI_Score`,NULL AS `KPI_Weighted_Score`,cast(`a`.`Overall_Score` as decimal(10,2)) AS `Appraisal_Score`,NULL AS `Completion_Status`,NULL AS `Is_Completed`,NULL AS `Has_Certificate`,cast(`ja`.`Employee_ID` as signed) AS `Employee_ID` from ((((`appraisal` `a` join `performance_cycle` `pc` on((`pc`.`Cycle_ID` = `a`.`Cycle_ID`))) join `job_assignment` `ja` on((`ja`.`Assignment_ID` = `a`.`Assignment_ID`))) join `job` `j` on((`j`.`Job_ID` = `ja`.`Job_ID`))) join `department` `d` on((`d`.`Department_ID` = `j`.`Department_ID`))) union all select 'TRAINING' AS `Record_Type`,cast(`ecj`.`Department_ID` as signed) AS `Department_ID`,`ecj`.`Department_Name` AS `Department_Name`,NULL AS `Cycle_ID`,NULL AS `Cycle_Name`,`tp`.`Title` AS `Program_Title`,NULL AS `KPI_Name`,NULL AS `KPI_Score`,NULL AS `KPI_Weighted_Score`,NULL AS `Appraisal_Score`,`et`.`Completion_Status` AS `Completion_Status`,cast((`et`.`Completion_Status` = 'Completed') as signed) AS `Is_Completed`,cast((`tc`.`Certificate_ID` is not null) as signed) AS `Has_Certificate`,cast(`et`.`Employee_ID` as signed) AS `Employee_ID` from (((`employee_training` `et` join `training_program` `tp` on((`tp`.`Program_ID` = `et`.`Program_ID`))) join `vw_employee_current_job` `ecj` on((`ecj`.`Employee_ID` = `et`.`Employee_ID`))) left join `training_certificate` `tc` on((`tc`.`ET_ID` = `et`.`ET_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_performance_cards`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_performance_cards`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_performance_cards` AS select cast((select count(0) from `performance_cycle` `pc` where ((coalesce(`pc`.`Submission_Deadline`,`pc`.`End_Date`) is null) or (coalesce(`pc`.`Submission_Deadline`,`pc`.`End_Date`) >= curdate()))) as signed) AS `Active_Performance_Cycles`,cast((select round(avg(`a`.`Overall_Score`),2) from `appraisal` `a`) as decimal(10,2)) AS `Average_Appraisal_Score`,cast((select round((sum((`eks`.`Employee_Score` is not null)) / nullif(count(0),0)),4) from `employee_kpi_score` `eks`) as decimal(10,4)) AS `KPI_Completion_Rate` from (select 1 AS `1`) `dummy` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_performance_cycles_status`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_performance_cycles_status`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_performance_cycles_status` AS select `performance_cycle`.`Cycle_ID` AS `Cycle_ID`,`performance_cycle`.`Cycle_Name` AS `Cycle_Name`,`performance_cycle`.`Cycle_Type` AS `Cycle_Type`,`performance_cycle`.`Start_Date` AS `Start_Date`,`performance_cycle`.`End_Date` AS `End_Date`,`performance_cycle`.`Submission_Deadline` AS `Submission_Deadline`,(case when (coalesce(`performance_cycle`.`Submission_Deadline`,`performance_cycle`.`End_Date`) is null) then 1 when (coalesce(`performance_cycle`.`Submission_Deadline`,`performance_cycle`.`End_Date`) >= curdate()) then 1 else 0 end) AS `Is_Open` from `performance_cycle` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_salary_stats_by_job_category`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_salary_stats_by_job_category`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_salary_stats_by_job_category` AS select `j`.`Job_Category` AS `Job_Category`,round(avg(`j`.`Min_Salary`),2) AS `Avg_Min_Salary`,round(avg(`j`.`Max_Salary`),2) AS `Avg_Max_Salary`,round(avg(`ca`.`Assigned_Salary`),2) AS `Avg_Assigned_Salary` from (`job` `j` left join `vw_current_assignment` `ca` on((`ca`.`Job_ID` = `j`.`Job_ID`))) group by `j`.`Job_Category` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_training_cards`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_training_cards`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_training_cards` AS select cast((select count(0) from `training_program`) as signed) AS `Total_Training_Programs`,cast((select count(0) from `training_certificate`) as signed) AS `Total_Certificates_Issued`,cast((select round((sum((`et`.`Completion_Status` = 'Completed')) / nullif(count(0),0)),4) from `employee_training` `et`) as decimal(10,4)) AS `Training_Completion_Rate` from (select 1 AS `1`) `dummy` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_training_completion_per_program`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_training_completion_per_program`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_training_completion_per_program` AS select `vw_training_fact`.`Program_ID` AS `Program_ID`,`vw_training_fact`.`Program_Code` AS `Program_Code`,`vw_training_fact`.`Program_Title` AS `Program_Title`,sum((case when (`vw_training_fact`.`Completion_Status` = 'Completed') then 1 else 0 end)) AS `Completed_Count`,count(0) AS `Total_Assignments`,round((sum((case when (`vw_training_fact`.`Completion_Status` = 'Completed') then 1 else 0 end)) / nullif(count(0),0)),4) AS `Completion_Rate` from `vw_training_fact` group by `vw_training_fact`.`Program_ID`,`vw_training_fact`.`Program_Code`,`vw_training_fact`.`Program_Title` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_training_completion_rate_overall`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_training_completion_rate_overall`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_training_completion_rate_overall` AS select count(0) AS `Total_Training_Enrollments`,sum((`employee_training`.`Completion_Status` = 'Completed')) AS `Completed_Enrollments`,round((sum((`employee_training`.`Completion_Status` = 'Completed')) / nullif(count(0),0)),4) AS `Training_Completion_Rate` from `employee_training` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_training_fact`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_training_fact`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_training_fact` AS select `et`.`ET_ID` AS `ET_ID`,`et`.`Employee_ID` AS `Employee_ID`,concat_ws(' ',`e`.`First_Name`,`e`.`Middle_Name`,`e`.`Last_Name`) AS `Employee_Name`,`tp`.`Program_ID` AS `Program_ID`,`tp`.`Program_Code` AS `Program_Code`,`tp`.`Title` AS `Program_Title`,`tp`.`Type` AS `Program_Type`,`tp`.`Subtype` AS `Program_Subtype`,`tp`.`Delivery_Method` AS `Delivery_Method`,`tp`.`Approval_Status` AS `Approval_Status`,coalesce(`ecj`.`Department_Name`,'Unassigned') AS `Department_Name`,`et`.`Completion_Status` AS `Completion_Status` from (((`employee_training` `et` join `employee` `e` on((`e`.`Employee_ID` = `et`.`Employee_ID`))) join `training_program` `tp` on((`tp`.`Program_ID` = `et`.`Program_ID`))) left join `vw_employee_current_job` `ecj` on((`ecj`.`Employee_ID` = `e`.`Employee_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_training_fact_dept`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_training_fact_dept`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_training_fact_dept` AS select `ecj`.`Department_Name` AS `Department_Name`,`tp`.`Title` AS `Program_Title`,`et`.`Employee_ID` AS `Employee_ID`,`et`.`Completion_Status` AS `Completion_Status`,(case when (`tc`.`Certificate_ID` is not null) then 1 else 0 end) AS `Has_Certificate` from (((`employee_training` `et` join `training_program` `tp` on((`tp`.`Program_ID` = `et`.`Program_ID`))) join `vw_employee_current_job` `ecj` on((`ecj`.`Employee_ID` = `et`.`Employee_ID`))) left join `training_certificate` `tc` on((`tc`.`ET_ID` = `et`.`ET_ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_training_participation`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_training_participation`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_training_participation` AS select `vw_training_fact`.`Program_ID` AS `Program_ID`,`vw_training_fact`.`Program_Code` AS `Program_Code`,`vw_training_fact`.`Program_Title` AS `Program_Title`,count(distinct `vw_training_fact`.`Employee_ID`) AS `Participants_Count` from `vw_training_fact` group by `vw_training_fact`.`Program_ID`,`vw_training_fact`.`Program_Code`,`vw_training_fact`.`Program_Title` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_workforce_cards`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_workforce_cards`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_workforce_cards` AS select (select count(0) from `employee`) AS `Total_Employees`,(select count(0) from `employee` where (`employee`.`Employment_Status` = 'Active')) AS `Active_Employees`,(select round(avg(timestampdiff(YEAR,`employee`.`DOB`,curdate())),2) from `employee` where (`employee`.`DOB` is not null)) AS `Average_Employee_Age`,(select round(avg(`vw_employee_service_years`.`Service_Years`),2) from `vw_employee_service_years`) AS `Average_Service_Years` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-12-18 21:35:11
